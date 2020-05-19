@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/fundo.jpg);
+    background-size: auto 100vh;
+    font-family: 'Cutive Mono', monospace;
+    height: 100vh;
+    font-size: 12px;
+}
+
+@media (min-width: 400px) {
+    body {
+      font-size: 14px;
+    }
+  }
+
+@media (min-width: 600px) {
+    body {
+      background-attachment: fixed;
+      background-size: cover;
+      font-size: 18px;
+    }
+  }
+
+@media (min-width: 1200px) {
+    body {
+     
+      font-size: 20px;
+    }
+  }
+
+header {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+.menu li {
+    list-style: none; 
+   }
+   
+.menu a {
+     display: block;
+     padding: 10px 20px;
+     transition: background-color 1s, color 1s;
+   }
+
+.menu a:active,
+.menu a:hover {
+     background-color: teal;
+     color: white;
+   }
+   
+a {
+     color: teal;
+     text-decoration: none;
+   }
+   
+a:hover {
+     text-decoration: underline;
+   }
+
+.titulo {
+    margin-top: 200px;
+       
+ }
+
+.site-subtitle, 
+.site-title {
+     color: rgb(100, 14, 14);
+     text-align: center;
+   }
+   
+.site-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5em;
+   }
+   
+.site-subtitle {
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.5em;
+   }
+
+.site-by {
+    font-family: 'Indie Flower', cursive;
+    text-align: right;
+    color: rgb(175, 76, 76);
+    }
+
+.slider {
+    display: block;
+    height: 80vh;
+    width: auto;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+    transition: 2s;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+ }
+
+ @media (min-width: 1200px) {
+    .slider li {
+        height: 70vh;
+        width: 140vh;
+        list-style: none;
+        position: absolute;
+        margin-left: 150px;
+    }
+ }
+
+.slider img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+ } 
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    background-color: #ffffff;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+ }
+
+.slider li:nth-child(2) label {
+    left: 40px;
+ }
+
+.slider li:nth-child(3) label {
+    left: 70px;
+ }
+
+.slider li:nth-child(4) label {
+    left: 100px;
+ }
+
+.slider li:nth-child(5) label {
+    left: 130px;
+ }
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+} 
+
+.sobre,
+.catalogo,
+.contato {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+.sobre h2,
+.catalogo h2,
+.contato h2 {
+  font-family: 'Indie Flower', cursive;
+  color:rgb(100, 14, 14);
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.sobre p {
+  color:rgb(39, 10, 10);
+  text-indent: 1.4em;
+  margin-bottom: 1.4em;
+  text-align: justify;
+  font-family: 'Cutive Mono', monospace;
+}
+
+@media (min-width: 1200px){
+    .sobre p {
+        font-size: 2em;
+      }
+}
+
+img {
+  width: auto;
+  height: 300px;
+}
+@media (min-width: 1200px){
+  img {
+      width: auto;
+      height: 450px; 
+  }
+}
+
+.sobre .avatar {
+    float: right;
+    margin-left: 2em;
+  }
+
+.sobre .avatar img {
+  border-radius: 50%;
+}
+  
+.arquivo li {
+  list-style: none;
+  margin-left: 100px;
+  font-size: 1.5em;
+} 
+
+
+.catalogo .grid {
+    display: grid;
+    grid-column: auto;
+    gap: 3em;
+    position: absolute;
+}
+
+.pdf {
+    height: 650px;
+    width: 450px;
+}
+
+@media (min-width: 500px) {
+    .pdf {
+    margin-left: 50px;
+    }
+ }
+@media (min-width: 1200px) {
+    .pdf {
+    margin-left: 85px; 
+    }
+ }
+
+.contato .icons {
+    text-align: center;
+  }
+  
+.contato a {
+    color: whitesmoke;
+    font-size: 4em;
+    transition: text-shadow 1s;
+  }
+  
+.contato a:active,
+.contato a:hover  {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+  }
+
+.rodape {
+    clear: both;
+    border-top: 1px solid #606060;
+}
+.rodape p {
+    text-align: center;
+}
